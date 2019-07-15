@@ -7,6 +7,8 @@ import java.io.*;
 import java.util.Scanner;  
 
 public class SplitFileInChunks {
+	
+	//split big file into chunks and return number of pieces
 	public static int splitInChunks(String destinationFile) 
 	{  	 int numOfChunks = 0;
 		 try{  
