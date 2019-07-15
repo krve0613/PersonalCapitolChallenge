@@ -33,8 +33,8 @@ This API accepts 3 parameters:
 2. sponsorState
 3. sponsorName
 
-https://ccef29lyql.execute-api.us-west-1.amazonaws.com/api/pc-aws-es-api?planName=tiffany
-https://ccef29lyql.execute-api.us-west-1.amazonaws.com/api/pc-aws-es-api?sponsorName=A & A
+https://ccef29lyql.execute-api.us-west-1.amazonaws.com/api/pc-aws-es-api?planName=AB%20-%20SW%20401K%20PLAN
+https://ccef29lyql.execute-api.us-west-1.amazonaws.com/api/pc-aws-es-api?planName=a%20&%20a
 https://ccef29lyql.execute-api.us-west-1.amazonaws.com/api/pc-aws-es-api?sponsorState=ca
 
 We can search using below api as well to give all the 3 inputs
