@@ -15,6 +15,7 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 /*
  * this is the class which implements RequestHandler to read the request from aws API gateway
+ * lamda function for AWS API GateWay
  */
 
 public class GateWayApi implements RequestHandler<PlansOperateUtil, JSONObject> {
