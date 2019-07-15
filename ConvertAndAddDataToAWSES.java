@@ -72,9 +72,9 @@ public class ConvertAndAddDataToAWSES {
 			    String column_name = metadata.getColumnName(i);
 			    obj.put(column_name, results.getObject(column_name));
 			    if(column_name.equals("SPONS_SIGNED_DATE") ) {
-			    	//System.out.println("hello");
+			    	
 			    	if(results.getObject(column_name).equals("")) {
-			    		//System.out.println("ok we have a null value");
+			    		
 			    		obj.put(column_name, null);
 			    	}
 			    }
@@ -96,9 +96,6 @@ public class ConvertAndAddDataToAWSES {
 
 			
 			String url = "https://search-pc-aws-es-23vmio4fa5eux3kvwqvea55zle.us-west-1.es.amazonaws.com";
-			
-			
-			//cURL Command: curl -u admin:admin -X POST -F cmd="lockPage" -F path="/content/geometrixx/en/toolbar/contacts" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 			
 			//curl -XPOST elasticsearch_domain_endpoint/_bulk --data-binary @bulk_movies.json -H 'Content-Type: application/json'
 			//Equivalent command conversion for Java execution
