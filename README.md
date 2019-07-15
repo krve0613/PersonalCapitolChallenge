@@ -8,21 +8,25 @@ Step 1:
 2. Open the AWS console and create Elastic search domain. 
 3. Firstly Convert csv file to json because AWS-ES accepts only json data.
 4. There is a limit on json file size to upload to AWS-ES. So make the json into small chunks so that we can upload the data piece by piece.
+
 command to upload json file to domain is: 
 curl -XPOST elasticsearch_domain_endpoint/_bulk --data-binary @chunk1.json -H 'Content-Type: application/json'
+
 Files:
-ConvertAndAddDataToAWSES.java
+
+ConvertAndAddDataToAWSES.java,
 SplitFileInChunks.java
 
 
 
 Step 2:
 1.	Create a lamda function to create API gate way and make it available to use it from client from AWS console.
-2.	Now write a code using maven project to make the functionality working according to the requirements.
+2.	Now write backend service using maven project to make the functionality working according to the requirements.
 3.	Upload the jar file and make the required configuration in AWS API Gateway
 
 Files: 
-GateWayApi.java
+
+GateWayApi.java,
 PlansOperateUtil.java
 
 EndPoints to use:
