@@ -10,7 +10,7 @@ Step 1:
 4. There is a limit on json file size to upload to AWS-ES. So make the json into small chunks so that we can upload the data piece by piece.
 
 command to upload json file to domain is: 
-curl -XPOST elasticsearch_domain_endpoint/_bulk --data-binary @chunk1.json -H 'Content-Type: application/json'
+curl -XPOST https://search-pc-aws-es-23vmio4fa5eux3kvwqvea55zle.us-west-1.es.amazonaws.com/_bulk --data-binary @chunk1.json -H 'Content-Type: application/json'
 
 Files:
 
@@ -30,6 +30,11 @@ GateWayApi.java,
 PlansOperateUtil.java
 
 EndPoints to use:
+
+Elastic search domain end point: 
+https://search-pc-aws-es-23vmio4fa5eux3kvwqvea55zle.us-west-1.es.amazonaws.com/plans/_search?q=SPONS_SIGNED_NAME:ab
+
+Http Get Methos to use it from PostMan:
 
 https://ccef29lyql.execute-api.us-west-1.amazonaws.com/api/pc-aws-es-api
 This API accepts 3 parameters:
