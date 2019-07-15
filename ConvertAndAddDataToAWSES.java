@@ -22,13 +22,15 @@ public class ConvertAndAddDataToAWSES {
 	public static String dir = "/Users/krishnaprathyushavelmakanti/Downloads/F_5500_2017_Latest";
 	
 	public static void main(String[] args) throws Exception{
-		System.out.println("converting from csv to JSON file");
+		
+		//converting from csv to JSON file
 		convertToJSON();
-		System.out.println("split json to chunks");
+		
+		//split json to chunks
 		SplitFileInChunks SF = new SplitFileInChunks();
 		int numOfChunks = SF.splitInChunks(destinationFile);
 		
-		System.out.println("upload each chunk file to AWS ES using curl");
+		//upload each chunk file to AWS ES using curl
 		for(int i =1; i<= numOfChunks; i++) {
 			String chunkFileName = dir+"/chunk"+i+".json";
 			uploadDatatoAWS(chunkFileName);
@@ -37,6 +39,7 @@ public class ConvertAndAddDataToAWSES {
 		
 	}
 	
+	//converting from csv to JSON file
 	public static void convertToJSON() throws Exception{
 		
 		//Provide the location of the destination file
@@ -88,6 +91,7 @@ public class ConvertAndAddDataToAWSES {
 		conn.close();
 	}
 	
+	//upload each chunk file to AWS ES using curl
 	public static void uploadDatatoAWS(String bulkFileName) {
 
 			
